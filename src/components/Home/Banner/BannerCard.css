@@ -1,0 +1,47 @@
+.banner .swiper {
+    width: 240px;
+    height: 320px;
+  }
+  
+.banner .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+.banner .swiper-slide:nth-child(1n) {
+    background-image: url("https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Cha_Coffee_Ar_General_Relativity-Nayeem_Hossain_Faruque-414d9-223669.jpeg");
+  }
+  
+.banner .swiper-slide:nth-child(2n) {
+    background-image: url("https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/44a34e6bd_195666.jpg");
+  }
+  
+.banner .swiper-slide:nth-child(3n) {
+    background-image: url("https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Vhut_Exposed-Isaac_Asimov-eec7c-282537.jpeg");
+  }
+  
+.banner .swiper-slide:nth-child(4n) {
+    background-image: url("https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/df8aa9cae_207188.jpg");
+  }
+  
+.banner .swiper-slide:nth-child(5n) {
+    background-image: url("https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Mohabissher_Sapiens_Sapienser_Mohabissho-Parthib_Pal-5bbff-284211.jpeg");
+  }
+  
+.banner .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+  
+.banner .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+  
+.banner .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+  
