@@ -113,7 +113,7 @@ export default function AllBooks(){
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+  const loadings = ["loading", "loading", "loading", "loading", "loading", "loading", "loading", "loading", "loading", "loading", "loading", "loading", ]
 
   return (
     <div className="sm:px-[55px] px-2 max-w-screen-2xl mt-[20px] ">
@@ -172,7 +172,7 @@ export default function AllBooks(){
    <div className="mx-auto max-w-4xl  py-5 lg:max-w-7xl">
 
      <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3 slg:grid-cols-4 lg:grid-cols-5 xl:gap-x-5 justify-center">
-       {currentItems?.map((book, index) => (
+       {currentItems?.length > 0 ? (currentItems.map((book, index) => (
         
         
            <section to={`/${book._id}`} class="mx-auto w-[225px] relative overflow-hidden lg:h-[400px] h-[450px] border shadow-sm items-center text-center" key={index}>                
@@ -212,7 +212,14 @@ export default function AllBooks(){
              </div>
            </section>
          
-       ))}
+       ))) : (loadings.map((loading) => <div className='mx-auto w-[225px] relative overflow-hidden lg:h-[350px] h-[450px] text-center'>
+       <div className="flex flex-col gap-4 w-52">
+         <div className="skeleton h-32 w-full"></div>
+         <div className="skeleton h-4 w-28"></div>
+         <div className="skeleton h-4 w-full"></div>
+         <div className="skeleton h-4 w-full"></div>
+       </div>
+     </div>))}
        
      </div>
      
@@ -228,7 +235,7 @@ export default function AllBooks(){
             key={index + 1}
             onClick={() => paginate(index + 1)}
             className={`mx-1 px-3 py-1 rounded-full ${
-              currentPage === index + 1 ? "bg-green text-white" : "bg-gray-200"
+              currentPage === index + 1 ? "bg-black text-white" : "bg-gray-200"
             }`}
           >
             {index + 1}

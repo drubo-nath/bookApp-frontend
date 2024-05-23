@@ -34,6 +34,8 @@ export default function SingleWriterData() {
       setFilteredBooks(matches);
    
   }, [name])
+
+  console.log(filteredBooks);
   return (
     <div className='m-20'>
         <h1 className='text-2xl font-bold'>{name}</h1><br />

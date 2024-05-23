@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Writers() {
 
   const [writers, setwriters] = useState([]);
+  const loadings = ["loading", "loading", "loading", "loading", "loading", "loading"]
 
   useEffect(() => {
     fetch('https://bookapp-backend-ylwm.onrender.com/all-writers')
@@ -60,7 +61,7 @@ export default function Writers() {
       </div>
       <Slider {...settings}>
         {
-          writers.map(( writer, index) => (
+          writers?.length > 0 ? (writers.map(( writer, index) => (
             <Link to={`/writers/${writer._id}`} key={index}>
               <div className=" " key={writer._id}>
                 <figure className="px-10 pt-10 text-center">
@@ -70,7 +71,13 @@ export default function Writers() {
                 </figure>                
               </div>
             </Link>
-          ))
+          ))) : (loadings.map((loading) => <div className='mx-auto w-[225px] relative overflow-hidden h-[250px] ml-5 mt-10'>
+          <div className="flex flex-col gap-5 w-52 justify-center ">
+            <div className="skeleton w-20 h-20 rounded-full shrink-0"></div>
+            <div className="skeleton h-4 w-28 text-center"></div>
+            <div className="skeleton h-4 w-full"></div>
+          </div>
+        </div>))
         }
       </Slider>
     </div>

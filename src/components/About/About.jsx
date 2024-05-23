@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='px-[100px] py-5'>
+    <div className='sm:px-[100px] px-[30px] py-5'>
       <h3 className='text-3xl '>প্রান্ত প্রকাশন সম্পর্কে</h3>
       <p className='text-xl '>
 

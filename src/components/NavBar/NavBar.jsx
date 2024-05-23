@@ -22,6 +22,9 @@ export default function NavBar() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
+    useEffect(() => {
+        setIsMenuOpen(false);
+    },[location])
 
     useEffect(() => {
         const handleScroll = () => {
